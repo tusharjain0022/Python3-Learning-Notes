@@ -1,0 +1,1214 @@
+udemy course link -https://www.udemy.com/course/complete-python-developer-zero-to-mastery/
+#COMPLETE PYTHON DEVELOPER 2020
+#AUTHOR:ANDRIE NEAGOIE
+#Notes prepared by: TUSHAR JAIN
+
+………………………………………………………………………………………………………………………………………………………………….
+SECTION 1 :introduction
+...............................................................................................................................................................
+
+SECTION 2: Python intoduction
+
+lec4: compiler vs interpreter
+
+lec5: python interpreter
+        download it from python.org
+        usually cpython is downloaded which is python interpreter written in c language
+        other types of compiler/interpreter are also availble on other sites like 
+        #pypy(written in    python)
+
+lec6: can use online compiler for python:
+        *repl.it (signup required)
+        *glot.in (starts coding without any signup required)
+
+lec8: first python program:
+         name=input('what is your name?')
+         print('helllloooo '+ name)
+         note: we can use " in place of '
+         written code----->python interpreter------> python vmachine----->machine language
+
+lec9: python 2 vs python 3
+....................................................................................................................................................................
+
+SECTION 3:Python basics I
+
+lec14: DATA TYPES
+       #fundamental data types
+        int
+        float
+        complex
+        bool             
+        str
+        list
+        tuple
+        set
+        dict
+       #classes--->custom types
+       #specialised data types
+        implemented using python extensions(modules)
+       #none 
+
+lec17: NUMBERS(int+float)
+          print('')--->syntax to print
+       note-print() add the curser to new line after printing because default argument is end=’\n’    
+       inside print() we can also do print(‘hello’,end=’ ‘ ) to prevent the cursor from going to
+       next line.
+       a=input('')---->syntax to input
+       type--->keyword to get type of data,eg-print(type(6))-----> will print <class 'int'>
+       #---> for adding comments
+       '**'----> power of operator --- print(2 ** 3) gives 8
+       '//'----> divide then rounded upto integer value --- print(5 // 4) gives 1
+       '%'-----> modulo operator --- gives remainder
+
+lec18: MATH FUNCTIONS
+         print(round(3.1)) gives 3
+         print(round(3.9)) gives 4
+         print(abs(-20) gives 20
+         note- i)you can comment multiple line by selecting lines and then press control+slash
+                   ii)dont need to memorise all function you just need to know where to google it and                        .                      how to implement it
+
+lec20: OPERATOR PRECEDENCE
+            follow "BODMAS"
+
+lec22: OPTIONAL:bin() and complex
+           i)complex is another data type that stores imaginary or complex numbers
+          ii)print(bin(5)) returns binary of 5- 0b101,note-0b represent that the number is in binary
+          iii)print(int('0b101',2)---->this tells the interpreter to print integer value of '0b101' or'101'          .             which is of base 2.
+
+lec23 :VARIABLES
+          its our 1st term
+          syntax- iq=190 ,note doesnt need to declare like in c or c++   
+          rules:-
+         i) snake_case(spaces not available)
+         Ii)start with lowercase or underscore
+        iii)letters,numbers,underscore
+        iv)case sensitive
+        v)dont overwrite keywords
+        note-underscore in starting signifies private variable(will be discuss latter on)
+            by convention variable in capitals represent constant and its value is not meant to be    .           change though it can change
+            '__'before variable(called dunder variables) 
+       shorthand practice---> a,b,c=1,2,3
+
+lec25: AUGMENTED AND ASSIGNMENT OPERATOR
+       value=5
+       value +=2 #this is called augmented assignment
+       print(value)
+       output--->7
+
+lec26: STRING
+       print(type('hi'))      
+       long_string='''         
+        WOW                       
+        0 0                                                          OUTPUT-
+        ---                                                          WOW
+        '''                                                               0 0
+        print(long_string)                                    ---
+        first='tushar '                                           tushar jain
+        last='jain'
+        full=first+last #string concatenation
+        print(full)
+
+lec29: ESCAPE SEQUENCES
+       \t ---> to add tab spacing
+       \n ---> to add new line
+       "it\'s a \"kind\" of sunny day"---> note \(backslash) tells the interpreter whatever comes     .       after this is a string
+       so to print ''(inverted comma) or ""(double inverted) in string use a backslash before it.
+
+lec30: FORMATED STRING
+       name='johnny'
+       age=55
+       #normal string
+       print('hi ' + name + '.you are ' + str(age) + ' years old)
+       #formated string
+       print(f'hi {name}.you are {age} years old')
+       note- ‘f’ before the string tells interpreter that this is a formated string 
+                this syntax is applicable in python3
+       #formated string(old syntax for python 2 also applicable in python3)
+       print('hi {0}. you are {1} years old'.format(name,age))
+       note- we change the order of printing of variables by altering the numbers in curlybraces
+
+lec31: STRING INDEX//called slicing of string
+         selfish='01234567'         output
+         #[start] 
+         print(selfish[2])          2
+        #[start:stop]           
+        print(selfish[2:7])        23456
+        #[start:stop:stepover]
+        print(selfish[1:8:2])      1357
+        print(selfish[::-1])       76543210
+
+lec32: IMMUTABILITY
+          Strings in python can’t change
+          eg:selfish='012345'
+          selfish[0]='8' #this is illegal operation
+          selfish=100 #this is allowed as whole new value is assigning with erasing the whole     .  .         previous shell
+
+lec33: BUILTIN FUNCTION+METHODS
+       str.upper()                    changes everything to capital letters
+       str.capitalize()               changes first letter in capital
+       str.lower()                    change everything to lowercase
+       str.find('str1')               finds first occurence of str1 and return index at which its found
+       str.replace(old_str,new_str)   replaces str1 with str2 in string str
+       len(str)                       returns length of the string
+
+lec39: LIST SLICING
+       #list is just like arrays
+       li=[1,2,3,4,5]
+       li2=['a','b','c']
+       li3=[1,2,'a',True]
+       #list are mutable unlike string
+       #list slicing
+       cart=['notebook,'glasses,'toys','grapes']
+       print(cart[0::2])    ----------> output-['notebook','toys']
+       new_cart=cart   #new_cart and cart are same list
+       new_cart=cart[:] #new_cart and cart are two different carts
+
+lec40: MATRIX
+       matrix=[
+                 [1,2,3],
+                 [4,5,6],
+                 [7,8,9],
+              ]
+
+lec41: LIST METHODS                    
+       basket=[1,2,3,4,5]
+       #adding                  output
+       basket.append(100)       #adds the element in last
+       print(basket)            [1,2,3,4,5,100]
+       basket.insert(4,9)       #insert 9 at index 4
+       print(basket)            [1,2,3,4,9,5,100]
+       basket=[1,2,3,4,5]
+       basket.extend([100,101]) #extends the list
+       print(basket)            [1,2,3,4,5,100,101] 
+        
+       #removing
+       basket=[1,2,3,4,5]
+       basket.pop()             #removes last element
+       print(basket)            [1,2,3,4] 
+       basket.pop(0)            #removes element at index 0
+       print(basket)            [2,3,4]
+       basket.remove(4)         #removes the value 4 from the list
+       print(basket)            [2,3]
+       basket.clear()
+       print(basket)             []   
+       
+       note- new_list=basket.pop() #is allowed
+             #this is not allowed with other methods
+             eg-new_list=basket.clear() #is not allowed it will print NONE
+
+lec42: LIST METHOD2
+       basket=['a','b','c','d','e']
+       #searching
+       print(basket.index('d'))          #prints index number of 'd' that is 3
+       print(basket.index('d',0,2))  #starts searching at index 0 and stops at 2 and 
+                                                                 prints index of 'd' if found in that range 
+                                                                 that is 0 to 2 otherwise returns error
+       print('x' in basket)    #asks is 'x' is in basket?,if yes output is TRUE otherwise FALSE 
+       print(basket.count('d') #prints how many times 'd' is present in basket
+
+lec43: LIST METHODS3
+       basket=['a','b','c','e','d'] 
+       #sort keyword
+       print(basket.sort()) #this is illegal syntax as .sort() doesn't create new copy of list
+       basket.sort()
+       print(basket)      output-['a','b','c','d','e']
+       #sorted keyword               output
+       print(basket.sorted())   ['a','b','c','d','e'] #creates new copy of list     
+       print(basket)            ['a','b','c','e','d'] #basket and basket.sorted() are different list
+       #two methods of copying
+       new_basket=basket[:]
+       new-basket=basket.copy()
+       new_basket=basket #dost not copy basket in new_basket but shares address of basket to   .      new_basket means both are same list
+       #reverse
+       basket.reverse() #reverses the whole list
+       print(basket)
+
+lec44: COMMON LIST PATTERNS
+             #reversing
+              print(basket[::-1])  #using list slicing
+              basket.reverse()
+            #range(start,stop)                                    output
+             print(range(1,10))             range(1,10)
+             print(list(range(1,10)))     [0,1,2,3,4,5,6,7,8,9]
+             print(list(range(10)))       [0,1,2,3,4,5,6,7,8,9]
+            #.join()
+            sentence='!'
+            new_sentence=sentence.join('hi','i','am','JOJO')
+            print(new_sentence)    #output-hi!i!am!JOJO
+           #new_sentence='!'.join('hi','i','am','JOJO') creates same output
+
+lec45: LIST UNPACKING
+             a,b,c,*other,d=[1,2,3,4,5,6,7]
+            #a=1;
+               #b=2;
+               #c=3;
+               #other=[4,5,6];
+               #d=7
+
+lec47: DICTIONARIES
+              #keyword for dictionary is "dict"
+              #definition-dictionary is unordered key value pair
+              #means- all keys are not stored in contagious manner
+             dictionary={
+              'a':1,                 #a,b are key that are string
+              'b':[2,4,6] 
+              }
+              print(dictionary['b'][2])   #output-6
+             #we can have list inside a dictionary and vice versa
+             
+lec48: DEVELOPER FUNDAMENTALS3
+             a developer should know which data structure or data type to use when 
+             and what are pros and cons of what
+              dictionary vs list
+
+
+lec49: DICTIONARY KEYS
+             a key needs to be immutable means vallue of key meant no to be change
+             a list cant be a dictionary key as it is mutable
+             a key has to be unique
+             if interpreter encounters same key it overwrites the data
+
+lec50: DICTIONARY METHODS 
+             user={
+             'basket':[1,2,3],
+             'greet':'hello'
+              }
+              #.get method
+              print(user.get('age'))   #prints NONE if age is not present in dictionary
+              print(user.get('age',55)) #print age if age is present otherwise first assign 55 to age         .             and then print
+             #another syntax for creating new dictionary
+              user2=dict(name='johnjohn')
+              print(user2)    #output-{'name':'johnjohn'}
+              #this syntaax is not generally used
+
+lec51: DICTIONARY METHODS2
+             print('basket' in user)  #prints TRUE if basket is present in the dictionary user     .           .            otherwise print FALSE
+             print('basket' in user.keys())  #checks in the keys of the dictionary user
+             print('basket' in user.values())
+             print(user.clear()) #prints NONE
+             user.clear print(user) #prints {}
+            #copying 
+             user2=user.copy()
+            #removes
+             print(user.pop('age')) #prints value of age that is going to be removed as pop()     .      .   .            returns that
+             user.pop('age')
+              print(user)  #prints removed dictionary
+            #popitem()
+             user.popitem()
+             print(user)  #randomly deletes one item from the dictionary 
+                                        because items are not contagious in dictionary
+            # update
+            print(user.update({age:55}))
+            print(user)
+
+lec52: TUPLES
+             are immutable list
+              my_tupple=(1,2,3,4,5)
+              my_tuple[2]='w' #this produces error as tuple are immuatble 
+
+lec53: TUPLES2
+              my_tuple=(1,2,3,4,5)
+              #count
+              print(my_tuple.count(5))  #prints no. of time 5 is present
+             #index
+              print(my_tuple.index(5)) #prints first index of 5
+
+lec54: SETS
+              #unordered collection of unique objects
+              my_set={1,2,3,4,5,5}
+              print(my_set) #output-{1,2,3,4,5} because set hold unique object
+              my_set.add(100)
+              my_set.add(2)
+              print(my_set) #output-{1,2,3,4,5,100}
+             question-remove duplicates from the list
+              my_list=[1,2,3,4,5,5]
+             answer-print(set(my_list))
+             #set does not support indexing
+             print(my_set[0]) #this produces error
+
+lec55: SETS2
+             my_set={1,2,3,4,5}
+             new_set={4,5,6,7,8,9,10}
+             #.difference()
+              print(my_set.difference(your_set)) #my_set minus your_set
+             #discard
+               print(my_set.discard(5))   #output-NONE
+               print(my_set)    #output-{1,2,3,4}
+            #.difference_update()                                                      output
+                my_set={1,2,3,4,5}
+                new_set={4,5,6,7,8,9,10}
+               print(my_set.difference(your_set)                               {1,2,3}
+               print(my_set)                                                                       {1,2,3,4,5}
+               print(my_set.difference_update(your_set)                 NONE
+               print(my_set)                                                                        {1,2,3}
+          #.intersection
+             print(my_set.intersection(your_set))                             {4,5}
+             print(my_set & your_set) #same result
+          #.isdisjoint()
+             print(my_set.isdisjoint(your_set))                                   FALSE
+          #.union()
+               print(my_set.union(your_set)                                           {1,2,3,4,5,6,7,8,9,10}
+               print(my_set | your_set) #also the same
+          #issubset()
+             print(my_set.issubset(your_set))
+          #issuperset()
+             print(your_set.issupeset(your_set))
+........................................................................................................................................................................
+
+SECTION 4: PYTHON BASICS2
+
+lec57:  CONDITIONAL LOGIC
+              if condition:
+                  statement 1         #instead of curly brackets or any 
+                  statement 2           brackets indention is used
+             elif condition:           #indention is not for decoration in python
+                  staement 1             but its for the interpretation of the interpreter
+             else:
+                  stament1
+             statement  
+          #we can join two statements like:
+           if condition1 and condition2
+
+lec59: TRUTHY VS FALSEY
+ 
+lec60: TERNARY OPERATOR
+              #conditional operation
+              #its a new feature of python3
+              # condition_if_true if condition else condition_if_false
+                  is_friend=True
+                  can_message="message allowed" if is_friend else"not allowed"
+
+lec61: SHORT CIRCUITING
+
+lec62: LOGICAL OPERATOR
+             #and
+             #or
+             #><
+             #==
+             #!=
+             print(not(True)) #output-False #not is also a keyword
+
+lec64: is vs ==
+             == checks whwther values are equal
+             is checks whwther the have same address or not
+             a=[1,2,3]
+             b=[1,2,3,]
+              print(a==b)    output-True
+              print( a is b)   output-False
+
+lec65: LOOP
+             for variable_name in 'string':
+             eg- for item in[1,2,3]
+                        print(item)
+            output-
+            1
+            2
+            3
+lec66: ITERABLES
+            iterable- object or a collection that can be iterate over(list,dictionary,tuple etc)
+            iterated --> one by one check each item in collection
+            user={
+             'name':'Golem',
+             'age': 5006,
+             'can_swim'=False
+            }
+            #method1
+             for item in user:
+                  print(item)
+            OUTPUT-
+            name
+            age
+            can_swim
+           #method2
+             for item in user.items():
+                 print(item)
+            OUTPUT-
+            ('name','Golem')
+            ('age',5006)
+            ('can_swim',False)
+          #method3
+            for item in user.values():
+                print(item)
+          OUTPUT-
+           Golem
+           5006
+            False
+          #method4
+           for item in user.keys():
+               print(item)
+          OUTPUT-
+          name
+          age
+          can_swim
+          #method5
+           for key,value in user.items():
+                print(ket,value)
+          OUTPUT-
+          name Golem
+          age 5006
+          can_swim False
+
+lec68: range()
+            for number in range(1,5)
+               print(number)
+           OUTPUT-
+           1
+           2
+           3
+           4
+           note- range() also has third parameter
+           range(start,stop,stepover)
+           by default start=0,stepover=1
+
+lec69: ENUMERATE()
+             for i,char in enumerate("hello")
+                print(i,char)
+              OUTPUT
+              0 h
+              1 e
+              2 l
+              3 l 
+              4 o
+
+lec70: WHILE LOOP
+             while condition:        output 
+              i=0                               0
+              while i < 5:                   1
+                  print(i)                     2
+                  i=i+1                          3
+                                                   4
+               note-python also has break keyword
+               note- else can be used with while
+
+lec72: break,continue,pass
+             pass-does nothing just pass control to next line 
+             use of pass-
+             for item in my_list
+                 #thinking what to code
+                  pass #we fill the space so that interpreter doesn't return any error 
+
+lec76: FUNCTIONS
+             #use 'def' keyword for defining any function
+             def say_hello(name,age):            #function definition #name,age are parameters
+                    print(f"hello {name} ({age})")
+             
+              say_hello('tushar','18')     #function calling #tushar,18 are arguments
+              OUTPUT-
+              hello tushar(18)
+              note-instead of brackets python uses indentation
+
+lec78: DEFAULT PARAMETERS AND KEYWORD ARGUMENTS
+              #default parameters
+               def say_hello(name='tushar',age='18'):
+                   print(f'hello {name} {age}')
+              #positional arguments
+                 say_hello('andrie','100')
+              #keyword arguments
+                 say_hello(age='100',name='andrie') #position/order does not matter here
+
+lec79: RETURN
+
+lec82: DOCSTRING
+             def test(a):
+                 ''' info:this function prints param a'''
+                 print(a)
+             #this string inside '''  ''' is called docstring
+             #whenever we type test when a popupbox appears it shows this line
+                like any other built in function does to show what does the function do
+            #keyword help()
+             help(test)   #output-'''info:this function prints param a'''
+            #dunder method __doc__
+             print(test.__doc__)  #output- info:this function prints param a
+
+lec84: *ARGS AND **KWARGS
+              def super_func(*args,**kwargs):          #arg ang kwarg are just variable name 
+                   total=0                                               #*arg take the parameter as tupple
+                   for items in kwargs.value():             #args=(1,2,3,4,5)
+                        total+=items                                 #**kwargs take the parameter as dictionary
+                   return sum(args) +total                   #kwargs={num1:5
+                                                                                               num2:10}
+               print(super_func(1,2,3,4,5,num1=5,num2=10))
+               #output-30     
+               #Rule: param,*args,deafult parameter,**kwargs
+             
+lec87: SCOPE RULES
+             #1 - start with local
+             #2- parent local ?
+             #3 - global
+             #4 - built in python function
+             #keyword to access global keyword without creating new one-global
+             #another keyword – local
+…………………………………………………………………………………………………………………………………………………………………………………………….
+
+SECTION5: DEVELOPER ENVIRONMENT
+
+Lec:93 PYTHON INSTALLATION
+            #Install it from python.org
+            #While installing click on the allow path option
+            #Use terminal and type python
+            #For windows use ‘command prompt’ but ‘power shell’ is recommended as linux and      .              mac commands are also allowed in power shell
+            #if your pc doesn’t have power shell use ‘gitbash’
+
+Lec96: PYTHON DEVELOPER TOOL
+            1.Terminal- used for quick testing
+            2.code editor –light weighted as compared to IDEs
+            3.IDEs- has tons of extra stuff
+            4.Jupytr Notebook
+
+Lec97: CODE EDITOR-sublime test
+            Best as recommended by the author
+            To upgrade python interpreter to python3 go to toolcommand palletsearch  .  . . . .  .           python3 and click(shortcut to open command palletctrl+shift+P
+            Explore more features on your own
+Lec99: optional:TERMINAL COMMANDS
+            #To show various elements in present directory
+              Mac/Linux/PowerShell- ls
+              Windows – dir
+            #to show present directory
+               Mac/Linux/power shell- pwd
+               Windows – cd
+           # to enter into directory
+              cd Desktop
+           #to go back previous
+               cd ..
+          #clearing screen
+             Clear
+             Windows-cls
+          #to enter into root directory
+             cd /
+             ls
+          # user directory
+             cd ~
+             ls
+       note-for more look into book mark section
+
+lec102: VISUAL STUDIO
+            it’s a code editor
+
+lec103: PYCHARM
+           its IDE 
+           it has pre-installed everything
+
+lec104: PEP8
+             python enhancement proposal for clean code
+             need to be installed in code editors but comes up with IDEs
+
+lec106: JUPYTER NOTEBOOK
+            anaconda distributor
+…………………………………………………………………………………………………………………………………………………………………………………..
+
+SECTION6: ADVANCED PYTHON :
+                  OBJECT ORIENTED PROGRAMMING
+
+Lec109: what is OOP?
+             #Everything in python is a object
+
+Lec110: OOP
+             Keyword- class
+             Convetion- use camel convention that is name the variable as BigWorld instead of  .     .  .                              bigworld or big_world   
+             Syntax-     
+             Class BigObject:   #class
+                 #code
+                    
+             Obj=BigObject()
+Lec111: CREATING OUR OWN OBJECT
+            Class PlayerCharacter:
+                  def __init__(self,name): #__init__ is a dunder method or a constructor method
+                       self.name = name     #self is used to reference object of PlayerCharacter
+                                                            that has not yet created
+                  def run(self)
+                       print(‘run’)
+ 
+              player1 = PlayerCharacter(‘cindy’)  #when we create this instance constructor is 
+              print(player1.name)                            called automatically and seld refered to player1
+              
+              #output-cindy
+             We can create new attributes as-
+             Player1.attack=50
+             Print(player1.attack) #output-50
+
+Lec112: ATTRIBUTES AND METHOD 
+            Note- help(list) or help(classname) prints blueprint of that data type
+            Class NameOfClass :
+                Class_attribute = ‘value’
+                def __init__(self,param1,param2):
+                     self.param1 = param1
+                     self.param2 = param2
+
+                def method(self)
+                     #code
+
+                @classmethod
+                 def cls_method(cls,param1,param2):
+                      #code
+ 
+                @staticmethod
+                 def stc_method(param1,param2):
+                      #code  
+
+Lec118: ENCAPSULATION
+
+Lec119: ABSTRACTION
+             
+Lec120: PRIVATE VS PUBLIC VARIABLE
+              Python does not have private variables
+              But we can name variable as _variable by using underscore before the name 
+              This tells other coder from python community as this variable meant to be private 
+              And should not be overwrite
+              #dunder method(double underscore) – we should not make our own dunder method
+              (convention) dunder method are named so to tell the coder to prevent it from
+              Overwriting as python does not have private scope 
+
+Lec121: INHERITENCE
+            Class user():
+                Def sig_in(self):
+                    Print(‘logged in’)
+      # to make inherited class
+         Class wizard(user):  #here class wizard inherit the properties of class user
+             Pass
+  
+        Wizars1=wizard()
+        Print(wizard.sign_in()) 
+
+Lec122: see the video 
+
+Lec123: POLYMORPHISM
+
+Lec125: SUPER()
+            Class user():
+               Def __init__(self,email):
+                  Self.email = email
+
+              Def sign_in(self):
+                  Print(‘logged in’)
+
+            Class Wizard(user):
+                Def __init__(self,name,power):
+                      Self.name = name
+                      Self.power = power
+
+               Def attack(self)
+                    Print(f’attacking with power of {self.power}’)
+
+              Wizard1=Wizard(‘merlin’,100)
+              Print(Wizard1.email)    #this give error though user class is inherited to wizard class 
+                                                      But  object of wizard class cant access __init__ function of .           .                                                     user class .
+             #to solve this :
+             #method 1:define wizard like this:
+             Class Wizard(user):
+                  Def __init__(self,name,power,email)
+                    User.__init__(self,email)
+                                          Self.name = name
+                      Self.power = power
+
+               Def attack(self)
+                    Print(f’attacking with power of {self.power}’)
+
+              Wizard1=Wizard(‘merlin’,100,’merlin@gmail.com’)
+              Print(Wizard1.email)  #output- merlin@gmail.com
+        
+             #method : use of super():cleaner code
+                           Class Wizard(user):
+                  Def __init__(self,name,power,email)
+                    Super().__init__(email)
+                                          Self.name = name
+                      Self.power = power
+
+               Def attack(self)
+                    Print(f’attacking with power of {self.power}’)
+
+              Wizard1=Wizard(‘merlin’,100,’merlin@gmail.com’)
+              Print(Wizard1.email)  #output- merlin@gmail.com
+
+Lec126: OBJECT INTROSPECTION:
+             #dir function
+              Print(dir(wizard1)) 
+              #this prints all the methods and dunder methods accessible to object wizard1
+             Help us to identify to which methods we have access to 
+
+Lec127: DUNDER METHODS or magic methods
+             Everything in python is inherited from base class ‘object’
+             Class toy():
+                Def _init__(self,color,age):
+                     Self.color = color 
+                     Self.age = age
+
+             Action_figure = toy(‘red’,0)
+             Print(action_figure.__str__)
+             Print(str(action_figure)     #both produces same output as dunder method __str__ is . . .                                                          used to implement the function of str()
+
+            #we can modify dunder methods but we shouldn’t
+             #modify __str__
+               def __str__(self):
+                   return f’{self.color}
+                 
+           print(str(action_figure))     output-red
+           print(str(‘action_figure))                 action_figure
+           #modifying doesn’t change actual function of str but it change its function only when it 
+              Is used with the object of toy.few more eg. To go:
+
+            def __del__(self):   #generaly delete some item inside object
+                print(‘deleted’)
+
+           def __call__(self):
+                return(‘yes??’)
+
+          def __getitem__(self,i):                #for this you need to modify __init__ in  above code as:
+                return self.my_dict[i]               self.my_dict={ 
+                                                                              ‘name’: ‘yoyo’,
+           del action_figure                                       ‘has_pets’: False
+           print(action_figure())                                    }
+           print(action_figure[‘name’])
+           #output-
+             deleted
+             yes??
+             yoyo
+              
+              
+Lec129: MULTIPLE INHERITENCE
+             Syntax- class variable(user,wizard,…)
+              Class user():
+                  Def __init__(self,email):
+                       Self.email = email
+
+                  Def sign_in(self):
+                       Print(‘logged in’)
+
+            Class Wizard(user):
+                Def __init__(self,name,power):
+                      Self.name = name
+                      Self.power = power
+
+               Def attack(self)
+                    Print(f’attacking with power of {self.power}’)
+
+            Class archer():
+                def __init__(self,name,arrows):
+                     self.name = name
+                     self.arrows = arrows
+
+               def check_arrows(self):
+                     print(f’{self.arrows} remaining ‘)
+              
+                def run(self):
+                      print(‘ran really fast’)
+
+      
+        class hybrid(wizard,archer):
+               pass
+
+         hb1 = hybrid(‘borgie’,50)
+          print(hb1.run())  
+          print(hb1.check_arrows()) #this produces error:object hb1 has no attribute named    
+                                                        check_arrows().because wizard is inherited first so 
+                                                       interpreter assumes 50 as power not arrows
+     #to solve this
+       Class hybrid(wizard, archer):
+            def __init__(self,name,power,arrows)
+                 archer.__init__(self,name,arrows)
+                 wizard.__init__(self,name,power)
+
+      hb1 = hybrid(‘borgie’, 50, 100)
+      print(hb1.check_arrows()) #now this works                                 
+             
+             
+
+Lec130: MRO-Method Resolution Order
+              MRO tells the interpreter the order to check attribute in inherited class in that order
+              We can check that order by 
+              inheritance hierarchy:-
+                       A
+             
+                B            C
+                   
+           D
+            
+interpreter first checks for the attribute in D then B(if D is inherited as D(B,C)) then C then A then universal base class ‘object
+note- we can also check the mro order by writing
+ print(D.__mro__)
+……………………………………………………………………………………………………………………………………………..........................
+ 
+SECTION7: ADVANCED PYTHON:FUNCTIONAL PROGRAMMING
+
+lec132: FUNCTIONAL PROGRAMMING
+            separate data and function unlike OOP
+            but both methods have same goal 
+            pillar-1)pure function
+
+lec133: PURE fUNCTION
+            input-functionoutput
+           if function is pure 
+           input and are same type# no matter how many times we run the function it poduces . . . .          same output 
+           it doesn’t have any side effect #if it interact with outside world
+          eg-
+          def multiply_by2(li):
+               new_list=[]
+               for item in li:
+                     new_list.append(item*2)   
+                  return new_list
+
+lec134: MAP()
+            syntax-map(func,*iterable)
+            def multiply_by2(item):
+                  return item*2
+               
+            print(list(map(multiply_by2, [1,2,3])))
+
+lec135: FILTER()
+            my_list=[1,2,3,4]
+            def only_odd(item)
+                 return item % 2 !=0
+
+            print(list(filter(only_odd,my_list))) #output-[1,3]
+
+lec136: ZIP()
+            my_list=[1,2,3]
+            your_list=[10,20,30]
+           print(list(zip(my_list,your_list)))  #output-[(1,10),(2,20),(3,30)]
+           #we can have multiple arguments to zip more elements together
+lec137: REDUCE()
+            #to use we need to import some files
+            from functools import reduce
+            my_list=[1,2,3]
+
+            def accumulator(acc,item):
+                   return acc + item
+
+           print(list(reduce(accumulator,my_list,0)))    #output-6
+
+lec139: LAMBDA EXPRESSION
+            #lambda expression is used to replace function which is used only once in a program  
+               and doesn’t need to be stored in the memory.
+
+            syntax- lambda param : action(param)
+            #we can replace the following code :
+            def multiply_by2(item):
+                  return item*2
+               
+            print(list(map(multiply_by2, [1,2,3])))
+            #by this:
+            print(list(map(lambda item: item*2, my_list)))  #here any name is not assigned to func
+
+         def accumulator(acc,item):
+                   return acc + item                          print(reduce(lambda acc,item: acc+item ,my_list))
+
+ print(list(reduce(accumulator,my_list,0)))
+
+lec140: EXERCISE
+            question- sort a=[(0,2),(4,3),(10,-1),(9,9)] on the basis of 2nd element i.e.(2,3,-1,9)
+            hint-a.sort()  sorts w.r.t 1st elements i.e.(0,4,10,9)
+                    sort function is .sort(key=NONE,reverse=False)
+            solution-
+            a.sort(key=lambda x: x[1])
+            print(a)
+
+lec141: LIST COMPREHENSIONS
+            list comprehensions
+            set comprehensions
+           dictionary comprehensions
+           #we can replace this:
+            my_list=[]
+            for char in ‘hello’:
+                my_list.append(char)
+           #by this :
+           my_list=[char for char in ‘hello’]
+           #code to print even 
+            my_list=[num for num in range(0,100) if num % 2 ==0]
+            print(my_list)
+
+lec142: SET AND DICTIONARY COMPREHENSION
+             #set comprehension is same as list just replace [] with {}
+     #dictionary comprehension
+    simple_dict = {
+               ‘a’ : 1,
+               ‘b’ : 2
+             }
+    my_dict = {key:value**2 for key,value in simple_dict.items()}
+    print(my_dict)
+…………………………………………………………………………………………………………………………………………………………………………….
+
+SECTION8: ADVANCED PYTHON:DECORATORS
+
+lec146: HIGHER ORDER FUNCTION,HOC
+              function that accepts function as parameter or returns function
+
+lec147: DECORATOR
+            it simplify a function(HOC) that wraps another function and enhances its functionality
+            #decorator
+             def my_decorator(func):
+                 def wrap_func():
+                     print(‘******’)
+                     func()
+                     print(‘******’)
+                 retun wrap_func
+
+         @my_decorator
+         def hello():
+            print(‘hello’)
+        #output-
+        ******
+        hello
+        ******
+
+lec149: why do we NEED DECORATOR?
+            #define a decorator that checks performance 
+            from time import time                #to module(going to study about this ahead)
+            def performance(fn):
+                  def wrapper(*args,**kwargs)   #to make function flexible and to accepts any 
+                       t1=time()                                  any number of arguments
+                       result=func(*args,**kwargs)
+                       t2=time()
+                       print(f’took {t2-t1} sec’)
+                       return result
+                  return wrapper
+
+           @performance             #now this can be used over any function to know its performanc
+             def long_time():
+                    for i in range(100000000)
+                        i*5
+           #output-
+          took 19.0450119972229 sec
+
+……………………………………………………………………………………………………………………………………………………………………………..
+SECTION9: ADVANCED PYTHON:ERROR HANDLING
+
+lec151: ERRORS IN PYTHON
+            
+lec152: ERROR HANDLING
+            age=int(input(‘what is your age?’))
+           age+10
+           #on entering string or other than int it produces valuerror
+           #error handling
+           try:
+               age=int(input(‘what is your age?’))  #this avoids error instead of showing error msg
+                age+10                                                 except block is run
+           except:
+                 print(‘please enter a number:’)
+            #we can also specify the error
+            while True:
+                 try:
+                     age= int(input(‘what is your age?’))
+                     print(age+10)
+                except ValueError as err:
+                      print(f‘please enter a number {err}’)
+               except ZeroDivisionError:
+                      print(‘please enter higher num than zero’)
+               else:
+                     print(‘thank you’)
+                     break
+             #we can also combine errors as:
+               except (ValueError,TypeError) as err:
+                   print(err)
+            #we also have ‘finally’ block it says no matter what happen just execute whatever is in 
+               finally block
+
+lec155: ERROR HANDLING
+            we can also raise error like
+            raise ValueError(‘hey cut it out’)
+           we can use any name in place of valueerror in above eg
+……………………………………………………………………………………………………………………………………………………………………………………………………..
+
+SECTION10: ADVANCED PYTHON:GENERATORS
+
+Lec156 GENERATOR
+            #range is a generator
+            #generator are special thing in python that allows us to use special keyword ‘yield’ that 
+             pauses and resumes functions
+            #a generator is iterable and generators are usually function
+           CODE-1                                                                     CODE-2
+          def generator_func(num):                                    def make_list(num):
+                for I in range(num):                                                  result=[]
+                  yield i*2                                                                   for I in range(num):
+                                                                                                           result.append(I)
+          for item in generator_func(100000):                                return resut
+             print(item)                                                          make_list(100000)
+           #works faster and saves memory                     #slower
+        #yield just keep tracks of where the function stops and resumes when next(function_name)
+lec159: UNDER THE HOOD OF GENERATOR
+           #for loop:
+            def special_for(iterable):
+                   iterator = iter(iterable)
+                   while True:
+                         try:
+                              print(iterator)
+                             print(next(iterator))
+                         except StopIteration:
+                              break
+
+             special_for([1,2,3])
+
+             #create own range function
+                class mygen():
+                         current = 0
+                         def __init__(self,first,last):
+                            self.first = first
+                            self.last = last
+
+                         def __iter__(self):
+                              return self
+
+                         def __next__(self):
+                                if mygen.current < self.last:
+                                       num = mygen.current
+                                       mygen.current+=1
+                                       return num
+                                 raise StopIteration
+                                                                          
+            gen = mygen(0,100)
+            for i in gen:
+                 print(i)
+
+lec160: PYTHON TEST
+lec161: 100 PYTHON EXERCISE
+…………………………………………………………………………………………………………………………………………………………………….................
+
+SECTION11: MODULES IN PYTHON
+
+lec163: MODULES
+           every file in python is a module and file can communicate among using import statement
+           #we create file with name- utility.py
+           def multiply(num1,num2):
+               return num1*num2
+          #we can use tjis multiply function in other by importing this file 
+           import utility
+           print(utility.multiply(2,3))
+         #a pycache(compiled code) is created for utility file for faster execution
+
+lec164: PACKAGES
+            a package is a lvl up : a package is a folder containing modules
+            #folder:shopping  file:shpping_cart we can import this file as:
+            import shopping.shopping_cart
+            #pycache is also created
+lec165: ANOTHER WAY TO IMPORT
+            import shopping.more_shopping.shopping_cart
+            print(shopping.more_shopping.shopping_cart.buy(‘apple’))
+           #we can replace above code as:
+            from shopping.more_shopping.shopping_cart import buy
+            print(buy(‘apple’))    
+           #from utility import *  this imports everything from utility module
+          #recommendation-explicitly define what you want to import
+
+lec166: __name__
+            print(__name__) prints name of that file
+           __name__=__main__ (by default for the file where execution starts )
+
+lec167: BUILT IN MODULES
+            #1.random
+              import random
+              help(random)  prints whole documentation of this module
+              print(dir(random))  prints whole methods that this module can use
+              print(random.random())  prints random number between 0 and 1
+              print(random.randint(1,10))  prints random number b/w 1 to 10
+              print(random.choice([1,2,3,4,5]))  picks up random element
+              my_list = [1,2,3,4,5]
+              random.shuffle(my_list)   shuffles the my_list
+              print(my_list)  
+
+lec168: BUILT IN MODULES2
+            #sys
+            import sys 
+            sys.argv  this helps to get parameter to file using terminal 
+            e.g. #we have 1.py file :
+            import sys
+            first=sys.argv[1]  #[0] contains file name
+            last = sys.argv[2]
+            print(f’hiii {first} {last}’)
+            #open terminal and run as:
+            python3 1.py tushar jain 
+            output- hiii tushar jain
+
+lec169: GUESSING GAME
+
+lec170: PYTHON PACKAGE INDEX
+           true power of python comes from its community
+           that makes python very popular is the community who shares packages/projects/codes
+           besides the python built in modules index we have ‘pypi.org’ which have packages/project 
+           made by diff. developers and can be used by us.
+           good practice is to first check in built in library/built in module index then on pypy.org 
+           instead of coding our own .
+
+lec171: PIP INSTALL
+           #1.pyjoke-you can access the jokes in your own project by importing pyjokes and using the
+           function get_joke and get_jokes
+           import pyjokes
+          joke=get_joke(‘en’,’neutral’)
+          print(joke)
+
+          #install using pip
+         just type pip install package name
+          #we can also specify version while installing 
+         pip3 install pyjoke==0.4.0
+
+lec172: VIRTUAL ENVIRONMENT
+             
+lec173: USEFUL MODULES
+           #1.collections module 
+
+           from collections import Counter,defaultdict,OrderedDict
+           #counter
+            li=[1,2,3,4,5,6,7,7]
+            print(Counter(li))   #Output- Counter({7: 2, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1})
+           #defaultdict()  first parameter inside() is a callable function that gives default value.
+           dictionary = defaultdict( int, {‘a’:1 , ‘b’:2})
+           print(dictionary[‘c’])   #output-0
+           dictionary = defaultdict( lambda: ‘does not exist’ , {‘a’:1 , ‘b’:2})
+           print(dictionary[‘c’])   #output-does not exist
+           #OrderedDict()
+             #case1:
+              d = OrderedDict()
+              d[‘a’] = 1
+              d[‘b’] = 2    
+              d2 = OrderedDict()
+              d2[‘a’] = 1
+              d2[‘b’] = 2
+             print(d2 == d)     #output-True  
+       #cas2-but if we change the order of insertion here the output will be different.
+              d = OrderedDict()
+              d[‘a’] = 1
+              d[‘b’] = 2    
+              d2 = OrderedDict()
+              d2[‘b’] = 2
+              d2[‘a’] = 1
+             print(d2 == d)     #output-False   
+        #but order of insertion does not matter in simple dictionary its ‘==’ just checks whether the
+       keys and associated values are same or not irrespective of order so the output of the case2 
+     will be True of simple dictionary.
+
+lec174: USEFUL MODULES 2
+            #2. datetime module
+            import datetime                       |       #output
+            print(datetime.time)                 |       00:00:00
+            print(datetime.time(5,45,6)      |       05:45:06
+            print(datetime.date.today())     |       #prints dates
+
+           #3. time module 
+            that we use in the decorator section for creating @performation 
+
+          #4. array module 
+…………………………………………………………………………………………………………………………………………………………………………………………………
+
+
+
+SECTION 12: DEBUGGING IN PYTHON
+
+lec176: How to debug code
+           #debugging
+           #linting
+           #ide/editor
+           #read errors
+            #pdb-python debugger ,it’s a built in module in python
+            import pdb
+            def add(num1,num2):
+                 pdb.set_trace()
+                return num1+num2
+           add(4,’sudsujd’)
+         #interpreter tries to run the code but stops as soon as it encounters (pdb) block
+         #output screen—
+         note check the video lecture
+         we can type ‘help’ in pdb to see what we can do with pdb
+        we can also write as help list in pdb  this gives list documentation 
+         #step->goes to next line in the code
+         #next->runs next line
+         #exit->to exit out of pdb
+         #a -> gives all the argument  
+…………………………………………………………………………………………………………………………………………………………………………………………
+ 
